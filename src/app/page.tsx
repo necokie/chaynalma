@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="pb-24">
-      <main className="container mx-auto px-4 lg:px-12 mt-8 md:mt-12 max-w-[1400px]">
+      <main className="container mx-auto px-4 lg:px-8 mt-8 md:mt-12 max-w-[1500px]">
         
         {/* Mobile Horizontal Navigation */}
         <div className="lg:hidden flex overflow-x-auto pb-4 mb-8 -mx-4 px-4 scrollbar-hide gap-2 sticky top-[80px] bg-background/95 backdrop-blur z-40 border-b border-border/50 py-2">
@@ -29,11 +29,11 @@ export default function Home() {
           })}
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-32">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-40">
           {/* Desktop Sidebar TOC */}
-          <div className="hidden lg:block w-56 flex-shrink-0">
+          <div className="hidden lg:block w-48 flex-shrink-0">
             <div className="sticky top-32">
-              <h3 className="font-bold text-[11px] uppercase tracking-widest text-muted-foreground/70 mb-4 px-3">
+              <h3 className="font-bold text-[10px] uppercase tracking-widest text-muted-foreground/60 mb-4 px-3">
                 {language === 'ru' ? 'Оглавление' : language === 'en' ? 'Table of Contents' : 'Mundarija'}
               </h3>
               <nav className="flex flex-col space-y-0.5 border-l border-border pl-4">
@@ -44,7 +44,7 @@ export default function Home() {
                     <a 
                       key={category.id} 
                       href={`#${category.id}`} 
-                      className="block px-3 py-2 text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors -ml-[17px] border-l border-transparent hover:border-foreground"
+                      className="block px-3 py-1.5 text-[12.5px] font-medium text-muted-foreground hover:text-foreground transition-colors -ml-[17px] border-l border-transparent hover:border-foreground"
                     >
                       {category.label[language]}
                     </a>

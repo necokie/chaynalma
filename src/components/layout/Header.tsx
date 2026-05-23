@@ -21,9 +21,9 @@ export function Header() {
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tighter text-foreground lowercase">
-              chaynalma<span className="text-primary">.uz</span>
+              chaynalma.uz
             </h1>
-            <span className="text-[10px] md:text-xs text-muted-foreground font-semibold bg-muted px-2 py-0.5 rounded-full mt-1">by necokie</span>
+            <a href="https://necokie.com" target="_blank" rel="noopener noreferrer" className="text-[10px] md:text-xs text-muted-foreground font-semibold bg-muted hover:bg-foreground hover:text-background transition-colors px-2 py-0.5 rounded-full mt-1">by necokie</a>
           </div>
           <p className="text-[12px] md:text-[13px] text-muted-foreground font-medium mt-0.5 max-w-sm text-balance">
             {language === 'ru' ? 'энциклопедия современного цифрового этикета' : 
