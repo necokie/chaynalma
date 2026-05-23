@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { Header } from "@/components/layout/Header";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -20,9 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${outfit.variable} font-sans antialiased bg-background text-foreground`}>
         <LanguageProvider>
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <div className="flex-1">
+              {children}
+            </div>
+          </div>
         </LanguageProvider>
       </body>
     </html>

@@ -15,21 +15,30 @@ export function Header() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-lg">
-            C
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md">
+      <div className="container mx-auto px-4 py-4 md:py-5 max-w-6xl flex items-start justify-between">
+        
+        <div className="flex flex-col">
+          <div className="flex items-baseline gap-2">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-foreground lowercase">
+              chaynalma<span className="text-primary">.uz</span>
+            </h1>
+            <span className="text-xs md:text-sm text-muted-foreground font-medium bg-muted px-2 py-0.5 rounded-full">by necokie</span>
           </div>
-          <span className="font-bold text-xl tracking-tight hidden sm:block">Chaynalama.uz</span>
+          <p className="text-[13px] md:text-[15px] text-muted-foreground font-medium mt-1 md:mt-2 max-w-sm text-balance">
+            {language === 'ru' ? 'энциклопедия современного цифрового этикета' : 
+             language === 'en' ? 'encyclopedia of modern digital etiquette' : 
+             language === 'uz-cyrl' ? 'замонавий рақамли этикет энциклопедияси' :
+             'zamonaviy raqamli etiket ensiklopediyasi'}
+          </p>
         </div>
 
-        <nav className="flex items-center gap-1 bg-muted p-1 rounded-lg">
+        <nav className="flex items-center gap-1 bg-muted/50 p-1 rounded-xl mt-1">
           {LANGUAGES.map((lang) => (
             <button
               key={lang.code}
               onClick={() => setLanguage(lang.code)}
-              className={`px-3 py-1 text-sm font-medium rounded-md transition-all ${
+              className={`px-3 py-1.5 text-xs md:text-sm font-bold rounded-lg transition-all ${
                 language === lang.code 
                   ? 'bg-white text-foreground shadow-sm' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -39,6 +48,7 @@ export function Header() {
             </button>
           ))}
         </nav>
+
       </div>
     </header>
   );
