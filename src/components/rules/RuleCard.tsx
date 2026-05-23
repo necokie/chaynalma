@@ -35,8 +35,6 @@ export function RuleCard({ rule }: RuleCardProps) {
           
           // Render bubbles
           return (
-          // Render bubbles
-          return (
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
