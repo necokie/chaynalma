@@ -1,64 +1,32 @@
 import { Rule } from '../types/rule';
 
 export const rules: Rule[] = [
-  // --- UNIVERSAL ---
-  {
-    slug: 'golden-rule',
-    categoryId: 'universal',
-    translations: {
-      'uz-latn': {
-        title: 'Ekran ortida ham inson borligini unutmang',
-        description: 'Internetdagi oltin qoida: yuzma-yuz aytishga uyaladigan yoki qo\'rqadigan gapingizni, onlayn ham yozmang. Har bir akkaunt ortida siz kabi his-tuyg\'ulari bor haqiqiy inson o\'tiribdi.',
-        bad_example: 'Bu qanaqa ahmoqona maqola o\'zi? Kim yozdi buni?!',
-        good_example: 'Maqoladagi ba\'zi fikrlarga qo\'shilmayman. Balki bu masalaga boshqacha yondashish kerakdir?'
-      },
-      'uz-cyrl': {
-        title: 'Экран ортида ҳам инсон борлигини унутманг',
-        description: 'Интернетдаги олтин қоида: юзма-юз айтишга уяладиган ёки қўрқадиган гапингизни, онлайн ҳам ёзманг. Ҳар бир аккаунт ортида сиздак ҳис-туйғулари бор ҳақиқий инсон ўтирибди.',
-        bad_example: 'Бу қанақа аҳмоқона мақола ўзи? Ким ёзди буни?!',
-        good_example: 'Мақоладаги баъзи фикрларга қўшилмайман. Балки бу масалага бошқача ёндашиш керакдир?'
-      },
-      'ru': {
-        title: 'Помните, что по ту сторону экрана живой человек',
-        description: 'Золотое правило интернета: не пишите онлайн то, что не сказали бы человеку в лицо. За каждым экраном сидит человек с реальными чувствами.',
-        bad_example: 'Что за идиотская статья? Кто это вообще писал?!',
-        good_example: 'Я не согласен с некоторыми пунктами в статье. Возможно, стоит посмотреть на это с другой стороны?'
-      },
-      'en': {
-        title: 'Remember the human',
-        description: 'The golden rule of the internet: behave online as you would in real life. If you wouldn\'t say it to someone\'s face, don\'t type it. There is a real person on the other side of the screen.',
-        bad_example: 'What kind of stupid article is this? Who even wrote this?!',
-        good_example: 'I have to disagree with some points in this article. Perhaps we could look at it from another perspective?'
-      }
-    }
-  },
-  
   // --- MESSAGING ---
   {
     slug: 'salomlashish',
     categoryId: 'messaging',
     translations: {
       'uz-latn': {
-        title: 'Faqat "Salom" deb yozmang',
-        description: 'Xabar yozganda faqat "Salom" deb yozib, javob kutmang. Bu suhbatdoshingizni kuttirishga majbur qiladi. Muddaoni bitta xabarda tushuntiring.',
+        title: 'Axborotni yaxlit va to\'liq uzatish tamoyili',
+        description: 'Muloqot jarayonida faqatgina salomlashish so\'zini yuborib, javob kutish suhbatdosh vaqtini samarasiz sarflashga olib keladi. Barcha kerakli axborot va murojaat maqsadi bitta xabarda to\'liq bayon etilishi maqsadga muvofiqdir.',
         bad_example: 'Salom!\n[10 daqiqa o\'tdi]\nQalaysiz?\n[5 daqiqa o\'tdi]\nSizdan bitta narsani iltimos qilmoqchi edim.',
         good_example: 'Salom, qalaysiz? Kechagi loyiha bo\'yicha yordamingiz kerak edi, qachon vaqtingiz bo\'ladi?'
       },
       'uz-cyrl': {
-        title: 'Фақат "Салом" деб ёзманг',
-        description: 'Хабар ёзганда фақат "Салом" деб ёзиб, жавоб кутманг. Муддаони битта хабарда тушунтиринг.',
+        title: 'Ахборотни яхлит ва тўлиқ узатиш тамойили',
+        description: 'Мулоқот жараёнида фақатгина саломлашиш сўзини юбориб, жавоб кутиш суҳбатдош вақтини самарасиз сарфлашга олиб келади. Барча керакли ахборот ва мурожаат мақсади битта хабарда тўлиқ баён этилиши мақсадга мувофиқдир.',
         bad_example: 'Салом!\n[10 дақиқа ўтди]\nҚалайсиз?\n[5 дақиқа ўтди]\nСиздан битта нарсани илтимос қилмоқчи эдим.',
         good_example: 'Салом, қалайсиз? Кечаги лойиҳа бўйича ёрдамингиз керак эди, қачон вақтингиз бўлади?'
       },
       'ru': {
-        title: 'Не пишите просто "Привет"',
-        description: 'Не пишите просто "Привет" и не ждите ответа. Опишите вашу проблему сразу в одном сообщении.',
+        title: 'Принцип целостной передачи информации',
+        description: 'Отправка исключительно приветствия с последующим ожиданием ответа приводит к неэффективному расходованию времени собеседника. Целесообразно излагать всю суть обращения в едином сообщении.',
         bad_example: 'Привет!\n[прошло 10 минут]\nКак дела?\n[прошло 5 минут]\nХотел кое-что попросить.',
         good_example: 'Привет, как дела? Мне нужна помощь со вчерашним проектом. Когда у тебя будет время?'
       },
       'en': {
-        title: 'Don\'t just say "Hello"',
-        description: 'Don\'t just say "Hello" and wait for a reply. Write your full question or request in the first message.',
+        title: 'Principle of Comprehensive Information Delivery',
+        description: 'Sending a standalone greeting and waiting for a response leads to an inefficient use of the recipient\'s time. It is recommended to state the entirety of your request within the initial message.',
         bad_example: 'Hello!\n[10 mins pass]\nHow are you?\n[5 mins pass]\nI wanted to ask a favor.',
         good_example: 'Hello, how are you? I need some help with yesterday\'s project, when will you be free?'
       }
@@ -69,28 +37,28 @@ export const rules: Rule[] = [
     categoryId: 'messaging',
     translations: {
       'uz-latn': {
-        title: 'Savol berishga ruxsat so\'ramang',
-        description: '"Savol bersam maylimi?" deb aslo vaqt yo\'qotmang. To\'g\'ridan-to\'g\'ri savolingizni bering.',
-        bad_example: 'Savol bersam bo\'ladimi?\n[Yoki: IT ni tushunadiganlar bormi?]',
-        good_example: 'Salom, menda React dasturida xatolik chiqyapti, kimdir yordam bera oladimi?'
+        title: 'Murojaat mazmunini bevosita bayon etish',
+        description: 'Savol berish uchun ruxsat so\'rash (masalan, "Savol bersam maylimi?") muloqot samaradorligini pasaytiradi. So\'rov to\'g\'ridan-to\'g\'ri va aniq ifodalanishi lozim.',
+        bad_example: 'Savol bersam bo\'ladimi?\n[Yoki: IT mutaxassislari bormi?]',
+        good_example: 'Salom, menda React dasturida xatolik yuzaga kelyapti, kimdir yordam bera oladimi?'
       },
       'uz-cyrl': {
-        title: 'Савол беришга рухсат сўраманг',
-        description: '"Савол берсам майлими?" деб асло вақт йўқотманг. Тўғридан-тўғри саволингизни беринг.',
-        bad_example: 'Савол берсам бўладими?\n[Ёки: IT ни тушунадиганлар борми?]',
-        good_example: 'Салом, менда React дастурида хатолик чиқяпти, кимдир ёрдам бера оладими?'
+        title: 'Мурожаат мазмунини бевосита баён этиш',
+        description: 'Савол бериш учун рухсат сўраш (масалан, "Савол берсам майлими?") мулоқот самарадорлигини пасайтиради. Сўров тўғридан-тўғри ва аниқ ифодаланиши лозим.',
+        bad_example: 'Савол берсам бўладими?\n[Ёки: IT мутахассислари борми?]',
+        good_example: 'Салом, менда React дастурида хатолик юзага келяпти, кимдир ёрдам бера оладими?'
       },
       'ru': {
-        title: 'Не спрашивайте разрешения задать вопрос',
-        description: 'Не тратьте время на вопросы вроде "Можно спросить?". Просто задавайте свой вопрос.',
-        bad_example: 'Можно задать вопрос?\n[Или: Тут есть кто разбирается в IT?]',
-        good_example: 'Привет, у меня ошибка в программе React, кто-нибудь может помочь?'
+        title: 'Прямое изложение сути обращения',
+        description: 'Запрос разрешения на вопрос (например, "Можно спросить?") снижает эффективность коммуникации. Запрос должен формулироваться прямо и четко.',
+        bad_example: 'Можно задать вопрос?\n[Или: Тут есть IT-специалисты?]',
+        good_example: 'Привет, у меня возникает ошибка в React, кто-нибудь может помочь?'
       },
       'en': {
-        title: 'Don\'t ask to ask',
-        description: 'Don\'t waste time asking "Can I ask a question?". Just ask your question directly.',
-        bad_example: 'Can I ask you something?\n[Or: Anyone here good at IT?]',
-        good_example: 'Hi, I am getting a React error, can anyone help me out?'
+        title: 'Direct Articulation of Inquiries',
+        description: 'Requesting permission to ask a question (e.g., "Can I ask you something?") decreases communication efficiency. Inquiries should be formulated directly and clearly.',
+        bad_example: 'Can I ask you something?\n[Or: Are there any IT specialists here?]',
+        good_example: 'Hi, I am getting an error in React, can anyone help me out?'
       }
     }
   },
@@ -99,28 +67,28 @@ export const rules: Rule[] = [
     categoryId: 'messaging',
     translations: {
       'uz-latn': {
-        title: 'Fikrni bitta xabarga jamlang',
-        description: 'So\'zlarni bo\'lib-bo\'lib yubormang (fragmentatsiya). Telefon tinimsiz jiringlashi odamni chalg\'itadi va asabiga tegadi. O\'z fikringizni bitta xabarda to\'liq bayon qiling.',
-        bad_example: 'Salom\nMen\nBugun\nBora olmayman\nChunki kasalman',
-        good_example: 'Salom, maza qochib kasal bo\'lib qoldim. Shuning uchun bugun bora olmayman.'
+        title: 'Matnni fragmentatsiyasiz shakllantirish',
+        description: 'Fikrni alohida so\'zlar yoki qisqa iboralar ko\'rinishida yuborish (fragmentatsiya) qabul qiluvchining diqqatini chalg\'itadi va ortiqcha bildirishnomalar kelishiga sabab bo\'ladi. Fikr mantiqan tugallangan, yagona xabar shaklida yuborilishi kerak.',
+        bad_example: 'Salom\nMen\nBugun\nBora olmayman\nChunki betobman',
+        good_example: 'Salom, sog\'lig\'im yomonlashgani sababli bugun bora olmayman.'
       },
       'uz-cyrl': {
-        title: 'Фикрни битта хабарга жамланг',
-        description: 'Сўзларни бўлиб-бўлиб юборманг (фрагментация). Телефон тинимсиз жиринглаши одамни чалғитади. Ўз фикрингизни битта хабарда тўлиқ баён қилинг.',
-        bad_example: 'Салом\nМен\nБугун\nБора олмайман\nЧунки касалман',
-        good_example: 'Салом, маза қочиб касал бўлиб қолдим. Шунинг учун бугун бора олмайман.'
+        title: 'Матнни фрагментациясиз шакллантириш',
+        description: 'Фикрни алоҳида сўзлар ёки қисқа иборалар кўринишида юбориш (фрагментация) қабул қилувчининг диққатини чалғитади ва ортиқча билдиришномалар келишига сабаб бўлади. Фикр мантиқан тугалланган, ягона хабар шаклида юборилиши керак.',
+        bad_example: 'Салом\nМен\nБугун\nБора олмайман\nЧунки бетобман',
+        good_example: 'Салом, соғлиғим ёмонлашгани сабабли бугун бора олмайман.'
       },
       'ru': {
-        title: 'Пишите всё в одном сообщении',
-        description: 'Не отправляйте каждое слово отдельным сообщением. Постоянные уведомления отвлекают и раздражают. Сформулируйте мысль в одном тексте.',
-        bad_example: 'Привет\nЯ\nСегодня\nНе приду\nПотому что заболел',
-        good_example: 'Привет, я сегодня не смогу прийти, так как заболел.'
+        title: 'Избегание фрагментации текста',
+        description: 'Отправка мыслей отдельными словами или короткими фразами (фрагментация) рассеивает внимание получателя и генерирует излишние уведомления. Мысль должна отправляться в виде логически завершенного, единого сообщения.',
+        bad_example: 'Привет\nЯ\nСегодня\nНе смогу прийти\nПотому что заболел',
+        good_example: 'Привет, я сегодня не смогу прийти по состоянию здоровья.'
       },
       'en': {
-        title: 'Don\'t send messages in fragments',
-        description: 'Don\'t send messages one word at a time. Constant notifications are annoying. Combine your thoughts into one structured message.',
+        title: 'Avoidance of Text Fragmentation',
+        description: 'Sending thoughts as separate words or short phrases (fragmentation) disrupts the recipient\'s focus and generates excessive notifications. Thoughts should be transmitted as a logically complete, unified message.',
         bad_example: 'Hi\nI\nCan\'t\nCome today\nBecause I\'m sick',
-        good_example: 'Hi, I won\'t be able to make it today because I\'m feeling sick.'
+        good_example: 'Hi, I won\'t be able to make it today due to illness.'
       }
     }
   },
@@ -129,28 +97,28 @@ export const rules: Rule[] = [
     categoryId: 'messaging',
     translations: {
       'uz-latn': {
-        title: 'Katta fayl va ovozli xabarlardan saqlaning',
-        description: 'Ogohlantirmasdan og\'ir videolar jo\'natmang (trafik yeydi). Ruxsatsiz 10 daqiqalik ovozli xabar (voice note) jo\'natmang, 2 ta gap bilan yozsa bo\'ladigan narsani ovozli qilmang.',
+        title: 'Media fayllar va audio xabarlarni muvofiqlashtirish',
+        description: 'Katta hajmdagi media fayllarni ogohlantirishsiz yuborish tarmoq trafigini asossiz sarflaydi. Shuningdek, matn orqali qisqa ifodalash mumkin bo\'lgan axborotni uzoq audio xabar shaklida yuborish tavsiya etilmaydi.',
         bad_example: '[1.5 GB hajmdagi fayl]\n[12 daqiqalik ovozli xabar]',
-        good_example: 'Video tayyor (1.5 GB). Telegramdan tashlaymi yoki Google Drivedan? Qulay bo\'lsa ovozli qilib batafsil tushuntirib yuboraman.'
+        good_example: 'Video tayyor (1.5 GB). Telegram orqali yuboraymi yoki bulutli xotiraga yuklaymi? Shuningdek, jarayonni ovozli xabarda tushuntirib o\'tsam bo\'ladimi?'
       },
       'uz-cyrl': {
-        title: 'Катта файл ва овозли хабарлардан сақланинг',
-        description: 'Огоҳлантирмасдан оғир видеолар жўнатманг (трафик ейди). Рухсатсиз 10 дақиқалик овозли хабар (voice note) жўнатманг.',
+        title: 'Медиа файллар ва аудио хабарларни мувофиқлаштириш',
+        description: 'Катта ҳажмдаги медиа файлларни огоҳлантиришсиз юбориш тармоқ трафигини асоссиз сарфлайди. Шунингдек, матн орқали қисқа ифодалаш мумкин бўлган ахборотни узоқ аудио хабар шаклида юбориш тавсия этилмайди.',
         bad_example: '[1.5 ГБ ҳажмдаги файл]\n[12 дақиқалик овозли хабар]',
-        good_example: 'Видео тайёр (1.5 ГБ). Телеграмдан ташлайми ёки Google Driveдан? Қулай бўлса овозли қилиб батафсил тушунтириб юбораман.'
+        good_example: 'Видео тайёр (1.5 ГБ). Телеграм орқали юборайми ёки булутли хотирага юклайми? Шунингдек, жараённи овозли хабарда тушунтириб ўтсам бўладими?'
       },
       'ru': {
-        title: 'Осторожнее с файлами и голосовыми',
-        description: 'Не отправляйте огромные файлы без предупреждения. Не записывайте 10-минутные голосовые, если это можно сказать в двух предложениях текста.',
+        title: 'Согласование передачи крупных медиафайлов',
+        description: 'Отправка крупных медиафайлов без предупреждения приводит к необоснованному расходу сетевого трафика. Также не рекомендуется отправлять длинные аудиосообщения, если информацию можно кратко изложить в тексте.',
         bad_example: '[Файл 1.5 ГБ]\n[Голосовое сообщение на 12 минут]',
-        good_example: 'Видео на 1.5 ГБ готово. Кинуть сюда или на Диск? И могу ли я записать голосовое, чтобы быстрее всё объяснить?'
+        good_example: 'Видео готово (1.5 ГБ). Отправить файлом или загрузить в облако? Также, могу ли я пояснить детали голосовым сообщением?'
       },
       'en': {
-        title: 'Warn before heavy files & voice notes',
-        description: 'Don\'t send huge files without warning about size. Don\'t send a 10-minute voice note when a 2-sentence text would work. Ask permission first.',
+        title: 'Coordination of Large Files and Audio Messages',
+        description: 'Sending large media files without prior notice unnecessarily consumes network bandwidth. Furthermore, it is not recommended to send lengthy audio messages when the information can be succinctly conveyed via text.',
         bad_example: '[1.5 GB file sent]\n[12 minute audio message]',
-        good_example: 'The video is 1.5 GB. Should I send it here or via Drive link? Also, is it okay if I send a quick voice note to explain?'
+        good_example: 'The video is ready (1.5 GB). Should I send it directly or via a cloud link? Also, would it be acceptable if I provided a brief audio explanation?'
       }
     }
   },
@@ -159,28 +127,28 @@ export const rules: Rule[] = [
     categoryId: 'messaging',
     translations: {
       'uz-latn': {
-        title: 'Bosh harflar va agresiv tinish belgilari',
-        description: 'Matnni to\'liq BOSH HARFLARDA yozish baqirishni anglatadi. Yolg\'iz so\'roq belgisi (?) agressiv talabdek ko\'rinadi.',
+        title: 'Tipografik me\'yorlarga rioya etish',
+        description: 'Matnni to\'liq bosh harflarda (Caps Lock) yozish kiber-etiketda tajovuzkorlik yoki baqirish sifatida qabul qilinadi. Yolg\'iz tinish belgilarini (ayniqsa so\'roq) yuborish ham nomaqbul bosim hisoblanadi.',
         bad_example: 'QACHON TAYYOR BO\'LADI????\n?',
-        good_example: 'Loyihaning qachon tayyor bo\'lishi haqida ma\'lumot bera olasizmi? Biz kutyapmiz.'
+        good_example: 'Loyihaning yakunlanish muddati haqida ma\'lumot bera olasizmi?'
       },
       'uz-cyrl': {
-        title: 'Бош ҳарфлар ва агрессив тиниш белгилари',
-        description: 'Матнни тўлиқ БОШ ҲАРФЛАРДА ёзиш бақиришни англатади. Ёлғиз сўроқ белгиси (?) агрессив талабдек кўринади.',
+        title: 'Типографик меъёрларга риоя этиш',
+        description: 'Матнни тўлиқ бош ҳарфларда (Caps Lock) ёзиш кибер-этикетда тажовузкорлик ёки бақириш сифатида қабул қилинади. Ёлғиз тиниш белгиларини (айниқса сўроқ) юбориш ҳам номақбул босим ҳисобланади.',
         bad_example: 'ҚАЧОН ТАЙЁР БЎЛАДИ????\n?',
-        good_example: 'Лойиҳанинг қачон тайёр бўлиши ҳақида маълумот бера оласизми? Биз кутяпмиз.'
+        good_example: 'Лойиҳанинг якунланиш муддати ҳақида маълумот бера оласизми?'
       },
       'ru': {
-        title: 'Капс и агрессивная пунктуация',
-        description: 'Текст ЗАГЛАВНЫМИ БУКВАМИ воспринимается как крик. Одиночный знак вопроса "?" читается как агрессия.',
+        title: 'Соблюдение типографических норм',
+        description: 'Использование исключительно заглавных букв (Caps Lock) в киберэтикете воспринимается как агрессия или крик. Отправка одиночных знаков препинания (особенно вопросительных) расценивается как неформальное давление.',
         bad_example: 'КОГДА БУДЕТ ГОТОВО????\n?',
-        good_example: 'Не могли бы вы подсказать, когда проект будет готов? Мы ждем результатов.'
+        good_example: 'Не могли бы вы уточнить сроки завершения проекта?'
       },
       'en': {
-        title: 'ALL CAPS and aggressive punctuation',
-        description: 'Typing in ALL CAPS is considered shouting online. A standalone "?" message is very aggressive.',
+        title: 'Adherence to Typographical Norms',
+        description: 'Utilizing exclusively capital letters (Caps Lock) is perceived in cyber-etiquette as aggression or shouting. Dispatching solitary punctuation marks (especially question marks) is also considered inappropriate pressure.',
         bad_example: 'WHEN WILL IT BE READY????\n?',
-        good_example: 'Could you give us an update on when it will be ready? We are waiting.'
+        good_example: 'Could you please provide an estimated time of completion for the project?'
       }
     }
   },
@@ -191,28 +159,28 @@ export const rules: Rule[] = [
     categoryId: 'group',
     translations: {
       'uz-latn': {
-        title: 'Ruxsatsiz guruhlarga qo\'shmang',
-        description: 'Hech kimni uning ruxsatisiz turli xil savdo yoki o\'quv guruhlariga qo\'shmang.',
+        title: 'Jamoaviy chatlarga qo\'shishdagi ruxsat etiketlari',
+        description: 'Foydalanuvchilarni ularning oldindan roziligisiz turli maqsadli (ayniqsa tijorat va reklama) guruhlarga qo\'shish kiber-etiket qoidalariga ziddir.',
         bad_example: '[Siz "Super Savdo 2026" guruhiga qo\'shildingiz]',
-        good_example: 'Salom, bizda yangi savdo guruhi ochildi. U yerda foydali ma\'lumotlar bo\'ladi. Sizni qo\'shib qo\'ysam maylimi?'
+        good_example: 'Salom, biz yangi tijorat maqsadidagi guruh ochdik. U yerda foydali ma\'lumotlar berib boriladi. Sizni ushbu guruhga tirkasam qarshiligingiz yo\'qmi?'
       },
       'uz-cyrl': {
-        title: 'Рухсатсиз гуруҳларга қўшманг',
-        description: 'Ҳеч кимни унинг рухсатисиз турли хил савдо ёки ўқув гуруҳларига қўшманг.',
+        title: 'Жамоавий чатларга қўшишдаги рухсат этикетлари',
+        description: 'Фойдаланувчиларни уларнинг олдиндан розилигисиз турли мақсадли (айниқса тижорат ва реклама) гуруҳларга қўшиш кибер-этикет қоидаларига зиддир.',
         bad_example: '[Сиз "Супер Савдо 2026" гуруҳига қўшилдингиз]',
-        good_example: 'Салом, бизда янги савдо гуруҳи очилди. У ерда фойдали маълумотлар бўлади. Сизни қўшиб қўйсам майлими?'
+        good_example: 'Салом, биз янги тижорат мақсадидаги гуруҳ очдик. У ерда фойдали маълумотлар бериб борилади. Сизни ушбу гуруҳга тиркасам қаршилигингиз йўқми?'
       },
       'ru': {
-        title: 'Не добавляйте в группы без спроса',
-        description: 'Никогда не добавляйте людей в группы (особенно рекламные) без их предварительного согласия.',
+        title: 'Этика получения согласия при добавлении в группы',
+        description: 'Добавление пользователей в целевые (особенно коммерческие и рекламные) группы без их предварительного согласия противоречит нормам киберэтикета.',
         bad_example: '[Вас добавили в группу "Супер Скидки 2026"]',
-        good_example: 'Привет, мы открыли новую группу со скидками. Будешь не против, если я тебя туда добавлю?'
+        good_example: 'Здравствуйте, мы создали новую коммерческую группу с полезной информацией. Вы не возражаете, если я включу вас в ее состав?'
       },
       'en': {
-        title: 'Don\'t add to groups without asking',
-        description: 'Never add someone to a group chat without asking for their permission first.',
+        title: 'Consent Protocols for Group Additions',
+        description: 'Adding users to targeted groups (especially commercial or promotional ones) without their explicit prior consent violates cyber-etiquette norms.',
         bad_example: '[You were added to "Super Sales 2026"]',
-        good_example: 'Hi, we started a new group chat for sales updates. Would it be okay if I added you?'
+        good_example: 'Hello, we have established a new commercial group offering relevant updates. Would you object to being added to this community?'
       }
     }
   },
@@ -221,28 +189,28 @@ export const rules: Rule[] = [
     categoryId: 'group',
     translations: {
       'uz-latn': {
-        title: 'Guruhda shaxsiy gaplarni gaplashmang',
-        description: 'Guruh chatlarida faqat hammaga tegishli mavzularda yozing. Ikki kishi orasidagi yoki offtop (mavzudan tashqari) muloqotni shaxsiy chatga o\'tkazing.',
+        title: 'Jamoaviy muhokamalarda xususiy mavzulardan cheklanish',
+        description: 'Guruhli muloqotda faqat jamoaning barcha a\'zolariga daxldor masalalar ko\'rib chiqilishi kerak. Ikki kishi orasidagi xususiy yoki mavzudan tashqari (off-topic) suhbatlar shaxsiy xabarlarga ko\'chirilishi lozim.',
         bad_example: '@Aziz bugun choyxonaga borasizmi? @Vali sizchi?',
-        good_example: '(Shaxsiy chatda) Salom Aziz, bugun choyxonaga borasizmi?'
+        good_example: '(Shaxsiy chatda) Salom Aziz, bugun tushlikka vaqtingiz bormi?'
       },
       'uz-cyrl': {
-        title: 'Гуруҳда шахсий гапларни гаплашманг',
-        description: 'Гуруҳ чатларида фақат ҳаммага тегишли мавзуларда ёзинг. Икки киши орасидаги ёки оффотоп мулоқотни шахсий чатга ўтказинг.',
+        title: 'Жамоавий муҳокамаларда хусусий мавзулардан чекланиш',
+        description: 'Гуруҳли мулоқотда фақат жамоанинг барча аъзоларига дахлдор масалалар кўриб чиқилиши керак. Икки киши орасидаги хусусий ёки мавзудан ташқари суҳбатлар шахсий хабарларга кўчирилиши лозим.',
         bad_example: '@Азиз бугун чойхонага борасизми? @Вали сизчи?',
-        good_example: '(Шахсий чатда) Салом Азиз, бугун чойхонага борасизми?'
+        good_example: '(Шахсий чатда) Салом Азиз, бугун тушликка вақтингиз борми?'
       },
       'ru': {
-        title: 'Не обсуждайте личное в группе',
-        description: 'В групповых чатах пишите только то, что касается всех. Личные и отвлеченные обсуждения ведите в личных сообщениях.',
-        bad_example: '@Aziz ты пойдешь сегодня в кафе? @Vali а ты?',
-        good_example: '(В личных сообщениях) Привет Азиз, ты пойдешь сегодня в кафе?'
+        title: 'Исключение частных тем в групповых обсуждениях',
+        description: 'В групповой коммуникации должны рассматриваться исключительно вопросы, касающиеся всех участников. Частные диалоги или обсуждения вне темы (off-topic) следует переносить в личные сообщения.',
+        bad_example: '@Aziz вы пойдете сегодня в кафе? @Vali а вы?',
+        good_example: '(В личных сообщениях) Здравствуйте, Азиз. У вас есть время на обед сегодня?'
       },
       'en': {
-        title: 'Keep personal chats out of groups',
-        description: 'In group chats, only discuss topics relevant to everyone. Move 1-on-1 conversations to direct messages.',
+        title: 'Exclusion of Private Topics in Group Discussions',
+        description: 'Group communications should solely address issues pertinent to all members. Private dialogues between individuals or off-topic discussions must be relocated to direct messaging.',
         bad_example: '@Aziz are you going to the cafe today? @Vali how about you?',
-        good_example: '(In direct messages) Hi Aziz, are you going to the cafe today?'
+        good_example: '(In direct messages) Hello Aziz, do you have time for lunch today?'
       }
     }
   },
@@ -251,28 +219,28 @@ export const rules: Rule[] = [
     categoryId: 'group',
     translations: {
       'uz-latn': {
-        title: 'Zanjirli xat va memlar bilan guruhni to\'ldirmang',
-        description: 'Siyosiy, diniy tortishuvlar yoki "10 ta odamga yuboring" deb yozilgan zanjirli xatlarni mutlaqo yubormang. Google\'dan tezda topish mumkin bo\'lgan savollarni so\'ramang.',
-        bad_example: '[5 ta kulgili video] \nShu xabarni 10 ta odamga yuboring, aks holda...',
-        good_example: '(Faqat guruhning asosiy maqsadi bo\'yicha muhim savol yozing)'
+        title: 'Informatsion gigiyena va nomaqbul materiallar tarmog\'i',
+        description: 'Guruhlarga mantiqsiz zanjirli xatlar, asossiz siyosiy yoki diniy baxslar va mavzuga aloqador bo\'lmagan vizual kontentlarni muntazam yuborish axborot shovqinini keltirib chiqaradi.',
+        bad_example: '[5 ta ommaviy mem] \nUshbu xabarni 10 kishiga yuboring, aks holda...',
+        good_example: '(Faqat guruhning rasmiy maqsadiga muvofiq, tasdiqlangan va dolzarb ma\'lumotlar ulashish)'
       },
       'uz-cyrl': {
-        title: 'Занжирли хат ва мемлар билан гуруҳни тўлдирманг',
-        description: 'Сиёсий, диний тортишувлар ёки "10 та одамга юборинг" деб ёзилган занжирли хатларни мутлақо юборманг.',
-        bad_example: '[5 та кулгили видео] \nШу хабарни 10 та одамга юборинг, акс ҳолда...',
-        good_example: '(Фақат гуруҳнинг асосий мақсади бўйича муҳим савол ёзинг)'
+        title: 'Информацион гигиена ва номақбул материаллар тармоғи',
+        description: 'Гуруҳларга мантиқсиз занжирли хатлар, асоссиз сиёсий ёки диний бахслар ва мавзуга алоқадор бўлмаган визуал контентларни мунтазам юбориш ахборот шовқинини келтириб чиқаради.',
+        bad_example: '[5 та оммавий мем] \nУшбу хабарни 10 кишига юборинг, акс ҳолда...',
+        good_example: '(Фақат гуруҳнинг расмий мақсадига мувофиқ, тасдиқланган ва долзарб маълумотлар улашиш)'
       },
       'ru': {
-        title: 'Не спамьте пересылками и мемами',
-        description: 'Не отправляйте "письма счастья" (перешли 10 друзьям) и не обсуждайте политику/религию. Не задавайте вопросы, которые легко гуглятся.',
-        bad_example: '[5 смешных видео] \nПерешли это 10 людям, иначе...',
-        good_example: '(Публикуйте только по теме самой группы)'
+        title: 'Информационная гигиена и ограничение спама',
+        description: 'Систематическая рассылка нерелевантного контента (цепочечные письма, мемы, религиозно-политические дискуссии) создает информационный шум и нарушает функциональность группы.',
+        bad_example: '[5 популярных мемов] \nПерешлите это 10 людям, иначе...',
+        good_example: '(Публикация исключительно релевантной, проверенной информации, соответствующей целям сообщества)'
       },
       'en': {
-        title: 'Don\'t spam memes or chain messages',
-        description: 'Don\'t broadcast chain messages ("Send this to 10 friends") or share political/religious content in unrelated groups. Use Google before asking basic questions.',
-        bad_example: '[5 meme videos] \nSend this to 10 friends or else...',
-        good_example: '(Only post content relevant to the group\'s purpose)'
+        title: 'Information Hygiene and Spam Restriction',
+        description: 'The systematic broadcast of irrelevant content (chain letters, memes, religious or political debates) generates informational noise and disrupts the group\'s functionality.',
+        bad_example: '[5 viral memes] \nForward this to 10 people or else...',
+        good_example: '(Posting only highly relevant, verified information that aligns with the community\'s objectives)'
       }
     }
   },
@@ -283,28 +251,28 @@ export const rules: Rule[] = [
     categoryId: 'calls',
     translations: {
       'uz-latn': {
-        title: 'Ogohlantirmasdan qo\'ng\'iroq qilmang',
-        description: 'Muhim yoki favqulodda vaziyat bo\'lmasa, qo\'ng\'iroq qilishdan oldin doim xabar yozib ruxsat so\'rang.',
+        title: 'Ovozli aloqa o\'rnatishdan oldingi ruxsatnoma',
+        description: 'Favqulodda vaziyatlar mustasno qilingan holda, to\'g\'ridan-to\'g\'ri ovozli qo\'ng\'iroqni amalga oshirishdan oldin matnli xabar orqali aloqa uchun qulay vaqtni aniqlashtirish qat\'iy talab etiladi.',
         bad_example: '[14:30 da qo\'ng\'iroq]\n[14:31 da qo\'ng\'iroq]\n[14:35 da qo\'ng\'iroq]',
-        good_example: 'Salom, bitta masala bo\'yicha gaplashib olishimiz kerak edi. Hozir qo\'ng\'iroq qilsam bo\'ladimi?'
+        good_example: 'Salom, muhim bir masala yuzasidan muhokama o\'tkazishimiz zarur edi. Hozir ovozli aloqa orqali bog\'lanishga imkoniyatingiz bormi?'
       },
       'uz-cyrl': {
-        title: 'Огоҳлантирмасдан қўнғироқ қилманг',
-        description: 'Муҳим ёки фавқулодда вазият бўлмаса, қўнғироқ қилишдан олдин доим хабар ёзиб рухсат сўранг.',
+        title: 'Овозли алоқа ўрнатишдан олдинги рухсатнома',
+        description: 'Фавқулодда вазиятлар мустасно қилинган ҳолда, тўғридан-тўғри овозли қўнғироқни амалга оширишдан олдин матнли хабар орқали алоқа учун қулай вақтни аниқлаштириш қатъий талаб этилади.',
         bad_example: '[14:30 да қўнғироқ]\n[14:31 да қўнғироқ]\n[14:35 да қўнғироқ]',
-        good_example: 'Салом, битта масала бўйича гаплашиб олишимиз керак эди. Ҳозир қўнғироқ қилсам бўладими?'
+        good_example: 'Салом, муҳим бир масала юзасидан муҳокама ўтказишимиз зарур эди. Ҳозир овозли алоқа орқали боғланишга имкониятингиз борми?'
       },
       'ru': {
-        title: 'Не звоните без предупреждения',
-        description: 'Если это не экстренная ситуация, всегда пишите сообщение перед тем, как позвонить.',
-        bad_example: '[Звонок в 14:30]\n[Звонок в 14:31]',
-        good_example: 'Привет, нам нужно обсудить один вопрос. Могу ли я сейчас позвонить?'
+        title: 'Предварительное согласование голосовых вызовов',
+        description: 'За исключением экстренных ситуаций, перед совершением прямого голосового вызова категорически требуется уточнить удобное для связи время посредством текстового сообщения.',
+        bad_example: '[Звонок в 14:30]\n[Звонок в 14:31]\n[Звонок в 14:35]',
+        good_example: 'Здравствуйте, нам необходимо обсудить один важный вопрос. Располагаете ли вы сейчас временем для голосового вызова?'
       },
       'en': {
-        title: 'Don\'t call without texting first',
-        description: 'Unless it\'s an emergency, always text to ask if it\'s a good time before calling someone.',
-        bad_example: '[Call at 14:30]\n[Call at 14:31]',
-        good_example: 'Hi, we need to discuss a quick issue. Is it okay to call you now?'
+        title: 'Prior Coordination of Voice Calls',
+        description: 'Excluding emergency situations, it is strictly required to ascertain a mutually convenient time for communication via text message prior to initiating a direct voice call.',
+        bad_example: '[Call at 14:30]\n[Call at 14:31]\n[Call at 14:35]',
+        good_example: 'Hello, it is necessary that we discuss a critical issue. Do you currently have the availability to engage in a voice call?'
       }
     }
   },
@@ -313,90 +281,92 @@ export const rules: Rule[] = [
     categoryId: 'calls',
     translations: {
       'uz-latn': {
-        title: 'Guruh qo\'ng\'iroqlarida mikrofonni o\'chiring',
-        description: 'Videokonferensiyada gapirmayotgan paytingiz mikrofoningizni (Mute) o\'chirib qo\'ying. Chalg\'ib ovqatlanmang yoki matn termang.',
-        bad_example: '[Orqa fonda bolalar yig\'isi va klaviatura ovozi eshitilmoqda]',
-        good_example: '[Mikrofoningiz o\'chirilgan (Muted), faqat gapirganda yoqasiz]'
+        title: 'Videokonferensiyalarda akustik tartib-qoidalar',
+        description: 'Guruhli ovozli yoki video qo\'ng\'iroqlarda so\'zga chiqilmayotgan vaqtlarda mikrofonni o\'chirib qo\'yish (mute) majburiydir. Orqa fondagi begona tovushlar muhokama ishtirokchilarining diqqatini pasaytiradi.',
+        bad_example: '[Orqa fonda maishiy shovqinlar, farzandlar ovozi va klaviatura chertishlari eshitilmoqda]',
+        good_example: '[Mikrofoningiz tizim tomonidan faol bo\'lmagan holatga keltirilgan, faqat so\'zga chiqqandagina yoqiladi]'
       },
       'uz-cyrl': {
-        title: 'Гуруҳ қўнғироқларида микрофонни ўчиринг',
-        description: 'Видеоконференцияда гапирмаётган пайтингиз микрофонингизни ўчириб қўйинг. Чалғиб овқатланманг ёки матн терманг.',
-        bad_example: '[Орқа фонда болалар йиғиси ва клавиатура овози эшитилмоқда]',
-        good_example: '[Микрофонингиз ўчирилган, фақат гапирганда ёқасиз]'
+        title: 'Видеоконференцияларда акустик тартиб-қоидалар',
+        description: 'Гуруҳли овозли ёки видео қўнғироқларда сўзга чиқилмаётган вақтларда микрофонни ўчириб қўйиш (mute) мажбурийдир. Орқа фондаги бегона товушлар муҳокама иштирокчиларининг диққатини пасайтиради.',
+        bad_example: '[Орқа фонда маиший шовқинлар, фарзандлар овози ва клавиатура чертишлари эшитилмоқда]',
+        good_example: '[Микрофонингиз тизим томонидан фаол бўлмаган ҳолатга келтирилган, фақат сўзга чиққандагина ёқилади]'
       },
       'ru': {
-        title: 'Выключайте микрофон в групповых звонках',
-        description: 'Отключайте микрофон, когда не говорите. Не занимайтесь посторонними делами (еда, печать на клавиатуре) во время видеозвонка.',
-        bad_example: '[На фоне слышен плач детей и стук клавиатуры]',
-        good_example: '[Ваш микрофон отключен, вы включаете его только чтобы сказать]'
+        title: 'Акустическая дисциплина в видеоконференциях',
+        description: 'При участии в групповых звонках обязательно отключение микрофона (mute) в периоды молчания. Посторонние фоновые шумы критически снижают концентрацию внимания участников обсуждения.',
+        bad_example: '[На фоне слышны бытовые шумы, голоса и стук клавиатуры]',
+        good_example: '[Ваш микрофон деактивирован системой и включается исключительно во время вашего выступления]'
       },
       'en': {
-        title: 'Mute your mic in group calls',
-        description: 'Keep your microphone muted when you are not speaking. Don\'t multitask visibly (typing, eating) during video calls.',
-        bad_example: '[Background noise of children crying and loud keyboard typing]',
-        good_example: '[Your mic is muted, unmuted only when speaking]'
+        title: 'Acoustic Discipline in Videoconferences',
+        description: 'During group calls, it is mandatory to mute the microphone when not actively speaking. Extraneous background noises critically degrade the concentration of discussion participants.',
+        bad_example: '[Background domestic noises, voices, and loud typing are audible]',
+        good_example: '[Your microphone is deactivated by the system and is only enabled during your remarks]'
       }
     }
   },
 
-  // --- SOCIAL MEDIA & CONTENT ---
+  // --- SOCIAL MEDIA ---
   {
     slug: 'mualliflik',
     categoryId: 'social',
     translations: {
       'uz-latn': {
-        title: 'Trollarga ozuqa bermang va ruxsatsiz ulashmang',
-        description: 'Instagram, TikTok kabi tarmoqlarda birovning mehnatini (audio/video) o\'ziniki qilib olmang. Provokatorlarga (trollar) javob bermang.',
-        bad_example: 'Bu qanaqa bemani video? Sen umuman tushunmas ekansan! (Trollga javob berish)',
-        good_example: '[Troll bloklandi va birovning videosi tagida uning muallifligi ko\'rsatildi]'
+        title: 'Intellektual mulk huquqi va destruktiv muloqotni inkor etish',
+        description: 'Ijtimoiy tarmoqlarda o\'zga mualliflarning ijodiy mahsulini (audio, video, matn) manba ko\'rsatmasdan o\'zlashtirish plagiat hisoblanadi. Shuningdek, axborot makonida provokatorlarga (trollarga) nisbatan e\'tiborsizlik strategiyasini qo\'llash tavsiya etiladi.',
+        bad_example: 'Bu qanday asossiz ma\'lumot? Siz ushbu sohani umuman tushunmas ekansiz! (Provokator bilan ochiq ziddiyatga kirishish)',
+        good_example: '[Provokator akkaunti cheklandi. O\'zga muallifning kontenti rasmiy havolasi bilan ulashildi]'
       },
       'uz-cyrl': {
-        title: 'Тролларга озуқа берманг ва рухсатсиз улашманг',
-        description: 'Instagram, TikTok каби тармоқларда бировнинг меҳнатини ўзиники қилиб олманг. Провокаторларга жавоб берманг.',
-        bad_example: 'Бу қанақа бемани видео? Сен умуман тушунмас экансан! (Троллга жавоб бериш)',
-        good_example: '[Тролл блокланди ва бировнинг видеоси тагида унинг муаллифлиги кўрсатилди]'
+        title: 'Интеллектуал мулк ҳуқуқи ва деструктив мулоқотни инкор этиш',
+        description: 'Ижтимоий тармоқларда ўзга муаллифларнинг ижодий маҳсулини манба кўрсатмасдан ўзлаштириш плагиат ҳисобланади. Шунингдек, ахборот маконида провокаторларга (тролларга) нисбатан эътиборсизлик стратегиясини қўллаш тавсия этилади.',
+        bad_example: 'Бу қандай асоссиз маълумот? Сиз ушбу соҳани умуман тушунмас экансиз! (Провокатор билан очиқ зиддиятга киришиш)',
+        good_example: '[Провокатор аккаунти чекланди. Ўзга муаллифнинг контенти расмий ҳаволаси билан улашилди]'
       },
       'ru': {
-        title: 'Не кормите троллей и указывайте авторов',
-        description: 'В соцсетях не крадите чужой контент (аудио/видео) без указания авторства. И не отвечайте на агрессию троллей — блокируйте.',
-        bad_example: 'Какое же это тупое видео! Ты вообще ничего не понимаешь! (Ответ троллю)',
-        good_example: '[Тролль заблокирован. Под чужим видео указана ссылка на автора]'
+        title: 'Соблюдение авторских прав и игнорирование деструктивной коммуникации',
+        description: 'Присвоение чужих творческих материалов (аудио, видео, текстов) без указания источника квалифицируется как плагиат. Кроме того, при столкновении с провокаторами (троллями) рекомендуется применять стратегию полного игнорирования.',
+        bad_example: 'Что за необоснованная информация? Вы абсолютно не разбираетесь в теме! (Вступление в открытый конфликт с провокатором)',
+        good_example: '[Аккаунт провокатора заблокирован. Чужой контент опубликован с указанием официальной ссылки на автора]'
       },
       'en': {
-        title: 'Don\'t feed trolls and credit creators',
-        description: 'Don\'t steal audio/content from other creators without credit. Don\'t engage with trolls—silence or block is the best response.',
-        bad_example: 'This is such a stupid video! You know nothing! (Replying to a troll)',
-        good_example: '[Troll is blocked. Content shared with credit to original creator]'
+        title: 'Intellectual Property Rights and Dismissal of Destructive Communication',
+        description: 'Appropriating the creative works of others (audio, video, text) without attribution is classified as plagiarism. Furthermore, when encountering provocateurs (trolls) in the information space, the application of a strict non-engagement strategy is recommended.',
+        bad_example: 'What baseless information is this? You clearly lack any understanding of the subject! (Engaging in open conflict with a provocateur)',
+        good_example: '[Provocateur account restricted. Third-party content shared with an official attribution link]'
       }
     }
   },
+
+  // --- CONTENT ---
   {
     slug: 'fakt-chek',
     categoryId: 'content',
     translations: {
       'uz-latn': {
-        title: 'Ma\'lumotlarni tarqatishdan oldin tekshiring',
-        description: 'Yolg\'on xabar (fake news), firibgarlik yoki eskirtilgan yangiliklarni tarqatmang. Uning qachon va qayerda chiqqanini aniqlang.',
-        bad_example: 'Shoshilinch! Bugun barchaga 1 milliondan tarqatilmoqda! Ssilkani bosing!',
-        good_example: '[Xabarni 2-3 ta rasmiy davlat kanallaridan tekshirib, yolg\'on ekanligini bilib, tarqatmadi]'
+        title: 'Axborot verifikatsiyasi va dezinformatsiyaning oldini olish',
+        description: 'Raqamli muhitda ma\'lumotni tarqatishdan avval uning haqiqiyligini, manbasi va xronologik dolzarbligini tekshirish (fact-checking) zarur. Tasdiqlanmagan xabarlarni tarqatish ijtimoiy manipulyatsiya va vahima keltirib chiqarishi mumkin.',
+        bad_example: 'Shoshilinch xabar! Barcha fuqarolarga davlat tomonidan moliyaviy yordam tarqatilmoqda! Zudlik bilan havolaga o\'ting!',
+        good_example: '[Kelib tushgan axborot 2-3 ta mustaqil va rasmiy davlat resurslari orqali tekshirilib, uning soxtaligi aniqlandi va tarqatish jarayoni to\'xtatildi]'
       },
       'uz-cyrl': {
-        title: 'Маълумотларни тарқатишдан олдин текширинг',
-        description: 'Ёлғон хабар, фирибгарлик ёки эскиртилган янгиликларни тарқатманг. Унинг қачон ва қаерда чиққанлигини аниқланг.',
-        bad_example: 'Шошилинч! Бугун барчага 1 миллиондан тарқатилмоқда! Ссилкани босинг!',
-        good_example: '[Хабарни расмий каналлардан текшириб, ёлғон эканлигини билиб, тарқатмади]'
+        title: 'Ахборот верификацияси ва дезинформациянинг олдини олиш',
+        description: 'Рақамли муҳитда маълумотни тарқатишдан аввал унинг ҳақиқийлигини, манбаси ва хронологик долзарблигини текшириш (fact-checking) зарур. Тасдиқланмаган хабарларни тарқатиш ижтимоий манипуляция ва ваҳима келтириб чиқариши мумкин.',
+        bad_example: 'Шошилинч хабар! Барча фуқароларга давлат томонидан молиявий ёрдам тарқатилмоқда! Зудлик билан ҳаволага ўтинг!',
+        good_example: '[Келиб тушган ахборот 2-3 та мустақил ва расмий давлат ресурслари орқали текширилиб, унинг сохталиги аниқланди ва тарқатиш жараёни тўхтатилди]'
       },
       'ru': {
-        title: 'Проверяйте факты перед репостом',
-        description: 'Не распространяйте фейки, мошеннические ссылки и старые новости под видом новых. Сверяйтесь с надежными источниками.',
-        bad_example: 'Срочно! Сегодня всем раздают по 1 миллиону! Переходи по ссылке!',
-        good_example: '[Проверил новость в 2-3 официальных источниках, понял что фейк, и не стал репостить]'
+        title: 'Верификация информации и предотвращение дезинформации',
+        description: 'Перед распространением информации в цифровой среде необходимо провести проверку ее достоверности, источника и хронологической актуальности (фактчекинг). Распространение непроверенных данных может спровоцировать социальные манипуляции и панику.',
+        bad_example: 'Экстренная новость! Государство раздает финансовую помощь всем гражданам! Срочно переходите по ссылке!',
+        good_example: '[Поступившая информация была верифицирована через несколько независимых официальных ресурсов; после выявления ее недостоверности процесс распространения был остановлен]'
       },
       'en': {
-        title: 'Fact-check before sharing',
-        description: 'Don\'t share unverified news, misinformation, or old news as new. Check multiple reliable sources first.',
-        bad_example: 'Urgent! Everyone is getting 1 million today! Click the link!',
-        good_example: '[Checked the news against official sources, realized it was fake, did not share]'
+        title: 'Information Verification and Prevention of Disinformation',
+        description: 'Prior to disseminating information in a digital environment, it is imperative to verify its authenticity, source, and chronological relevance (fact-checking). Distributing unverified data can incite social manipulation and panic.',
+        bad_example: 'Urgent Alert! The government is distributing financial aid to all citizens! Follow the link immediately!',
+        good_example: '[The received information was cross-verified against independent, official resources; upon discovering its illegitimacy, dissemination was halted]'
       }
     }
   },
@@ -407,28 +377,28 @@ export const rules: Rule[] = [
     categoryId: 'comments',
     translations: {
       'uz-latn': {
-        title: 'Izohlarda shaxsiyatga tegmang',
-        description: 'Muhokamalarda qatnashganda faqat g\'oyalarni tanqid qiling, shaxsga o\'tmang. Hech qanday ma\'nosiz ("Birinchi!") izohlar yozmang.',
-        bad_example: 'Sen o\'zi umuman aqli past ekansan! Qanaqa qilib xato yozyapsan?',
-        good_example: 'Fikringizga qo\'shilmayman, chunki bu statistikaga to\'g\'ri kelmaydi. Mana faktlar...'
+        title: 'Ilmiy asoslangan va konstruktiv tanqid madaniyati',
+        description: 'Ochiq muhokamalarda ishtirok etish jarayonida tanqid obyekti shaxs emas, balki faqat uning g\'oyalari bo\'lishi shart. Axborot qiymatiga ega bo\'lmagan yoki shaxsiyatga qaratilgan izohlar raqamli muhitning intellektual darajasini tushiradi.',
+        bad_example: 'Sizning intellektual darajangiz juda past! Qanday qilib bunday elementar xatolarga yo\'l qo\'yasiz?',
+        good_example: 'Ushbu xulosangiz bilan kelisha olmayman, sababi u so\'nggi statistik ma\'lumotlarga ziddir. Quyida muqobil faktlarni keltirib o\'taman...'
       },
       'uz-cyrl': {
-        title: 'Изоҳларда шахсиятга тегманг',
-        description: 'Муҳокамаларда қатнашганда фақат ғояларни танқид қилинг, шахсга ўтманг. Ҳеч қандай маъносиз изоҳлар ёзманг.',
-        bad_example: 'Сен ўзи умуман ақли паст экансан! Қанақа қилиб хато ёзяпсан?',
-        good_example: 'Фикрингизга қўшилмайман, чунки бу статистикага тўғри келмайди. Мана фактлар...'
+        title: 'Илмий асосланган ва конструктив танқид маданияти',
+        description: 'Очиқ муҳокамаларда иштирок этиш жараёнида танқид объекти шахс эмас, балки фақат унинг ғоялари бўлиши шарт. Ахборот қийматига эга бўлмаган ёки шахсиятга қаратилган изоҳлар рақамли муҳитнинг интеллектуал даражасини туширади.',
+        bad_example: 'Сизнинг интеллектуал даражангиз жуда паст! Қандай қилиб бундай элементар хатоларга йўл қўясиз?',
+        good_example: 'Ушбу хулосангиз билан келиша олмайман, сабаби у сўнгги статистик маълумотларга зиддир. Қуйида муқобил фактларни келтириб ўтаман...'
       },
       'ru': {
-        title: 'Не переходите на личности в комментариях',
-        description: 'В комментариях критикуйте идеи, а не людей. Не пишите бессмысленные сообщения вроде "Первый!".',
-        bad_example: 'Ты вообще дурак что ли? Как можно так писать с ошибками?',
-        good_example: 'Я не согласен с вашим мнением, так как оно противоречит статистике. Вот факты...'
+        title: 'Культура аргументированной и конструктивной критики',
+        description: 'В процессе участия в открытых дискуссиях объектом критики должны выступать исключительно идеи, а не личности. Комментарии, не имеющие информационной ценности или содержащие переходы на личности, снижают интеллектуальный уровень цифровой среды.',
+        bad_example: 'Ваш интеллектуальный уровень крайне низок! Как можно допускать столь элементарные ошибки?',
+        good_example: 'Вынужден не согласиться с вашим выводом, поскольку он противоречит последним статистическим данным. Позвольте привести альтернативные факты...'
       },
       'en': {
-        title: 'Don\'t make personal attacks in comments',
-        description: 'Disagree with ideas, not people. Don\'t comment just to insult, and don\'t write meaningless "first!" comments.',
-        bad_example: 'You are so stupid! How can you make such spelling mistakes?',
-        good_example: 'I have to disagree with this, as it contradicts recent statistics. Here are the facts...'
+        title: 'Culture of Evidence-Based and Constructive Criticism',
+        description: 'When participating in open discussions, the object of criticism must strictly be ideas, not individuals. Comments lacking informational value or containing personal attacks degrade the intellectual caliber of the digital environment.',
+        bad_example: 'Your intellectual capacity is extremely low! How can you make such elementary errors?',
+        good_example: 'I must disagree with this conclusion, as it directly contradicts recent statistical data. Allow me to present alternative evidence...'
       }
     }
   },
@@ -439,28 +409,60 @@ export const rules: Rule[] = [
     categoryId: 'privacy',
     translations: {
       'uz-latn': {
-        title: 'Birovning shaxsiy hayotiga hurmat',
-        description: 'Boshqalarning rasmlarini, telefon raqamlarini, yozishmalarini (skrinshot) yoki joylashuvini ularning ruxsatisiz internetga joylamang.',
-        bad_example: 'Qaranglar, kecha Sardor menga shunaqa deb yozdi! [Shaxsiy suhbat skrinshoti]',
-        good_example: 'Sardor, kechagi rasmlarni Instagramga joylasam maylimi? Ruxsat berasizmi?'
+        title: 'Shaxsiy daxlsizlik va konfidensial axborot himoyasi',
+        description: 'Uchinchi shaxslarga tegishli vizual materiallar, aloqa raqamlari, xususiy yozishmalar trankriptlari yoki geolokatsiya ma\'lumotlarini ularning qat\'iy roziligisiz raqamli muhitga joylashtirish qonunan va axloqan taqiqlanadi.',
+        bad_example: 'E\'tibor bering, kecha suhbatdoshim menga quyidagi mazmunda xabar yozdi. [Xususiy yozishmalar skrinshoti ilova qilindi]',
+        good_example: 'Hurmatli hamkasb, kechagi tadbir davomida olingan fotosuratlarni ijtimoiy tarmoqlardagi korporativ sahifamizga joylashtirishimga ruxsat berasizmi?'
       },
       'uz-cyrl': {
-        title: 'Бировнинг шахсий ҳаётига ҳурмат',
-        description: 'Бошқаларнинг расмларини, телефон рақамларини, ёзишмаларини ёки жойлашувини уларнинг рухсатисиз интернетга жойламанг.',
-        bad_example: 'Қаранглар, кеча Сардор менга шунақа деб ёзди! [Шахсий суҳбат скриншоти]',
-        good_example: 'Сардор, кечаги расмларни Инстаграмга жойласам майлими? Рухсат берасизми?'
+        title: 'Шахсий дахлсизлик ва конфиденциал ахборот ҳимояси',
+        description: 'Учинчи шахсларга тегишли визуал материаллар, алоқа рақамлари, хусусий ёзишмалар транкриптлари ёки геолокация маълумотларини уларнинг қатъий розилигисиз рақамли муҳитга жойлаштириш қонунан ва ахлоқан тақиқланади.',
+        bad_example: 'Эътибор беринг, кеча суҳбатдошим менга қуйидаги мазмунда хабар ёзди. [Хусусий ёзишмалар скриншоти илова қилинди]',
+        good_example: 'Ҳурматли ҳамкасб, кечаги тадбир давомида олинган фотосуратларни ижтимоий тармоқлардаги корпоратив саҳифамизга жойлаштиришимга рухсат берасизми?'
       },
       'ru': {
-        title: 'Уважайте чужую приватность',
-        description: 'Никогда не публикуйте чужие фото, номера телефонов, скриншоты личных переписок или местоположение без согласия человека.',
-        bad_example: 'Смотрите, что мне вчера Сардор написал! [Скриншот личной переписки]',
-        good_example: 'Сардор, ты не против если я выложу вчерашние фотки в Инстаграм?'
+        title: 'Соблюдение неприкосновенности частной жизни и защита конфиденциальной информации',
+        description: 'Публикация визуальных материалов, контактных данных, транскриптов частных переписок или геолокационных данных третьих лиц без их однозначного согласия является юридически и этически недопустимой.',
+        bad_example: 'Обратите внимание, вчера собеседник прислал мне сообщение следующего содержания. [Прикреплен скриншот частной переписки]',
+        good_example: 'Уважаемый коллега, позволите ли вы опубликовать фотографии, сделанные во время вчерашнего мероприятия, на нашей корпоративной странице в социальной сети?'
       },
       'en': {
-        title: 'Respect others\' privacy',
-        description: 'Don\'t share others\' personal information, screenshots of private conversations, or tag them in photos without permission.',
-        bad_example: 'Look what Sardor texted me yesterday! [Screenshot of private DMs]',
-        good_example: 'Sardor, is it okay if I post yesterday\'s photos to Instagram?'
+        title: 'Preservation of Privacy and Protection of Confidential Information',
+        description: 'The publication of visual materials, contact details, transcripts of private correspondence, or geolocation data belonging to third parties without their explicit consent is both legally and ethically prohibited.',
+        bad_example: 'Please note the following message my colleague sent me yesterday. [Screenshot of private correspondence attached]',
+        good_example: 'Respected colleague, would you grant permission for me to publish the photographs taken during yesterday\'s event on our corporate social media page?'
+      }
+    }
+  },
+
+  // --- UNIVERSAL ---
+  {
+    slug: 'golden-rule',
+    categoryId: 'universal',
+    translations: {
+      'uz-latn': {
+        title: 'Virtual makonda inson omilini inobatga olish',
+        description: 'Raqamli etiketning fundamental tamoyili: vizual anonimlik holatida ham suhbatdoshning shaxsini va uning hissiy holatini hurmat qilish. Reallikda aytilmaydigan so\'zlarni virtual makonda ham qo\'llamaslik qat\'iy tavsiya etiladi.',
+        bad_example: 'Bu qanday mantiqsiz maqola o\'zi? Muallif umuman savodsiz ekan!',
+        good_example: 'Maqolada keltirilgan ayrim xulosalar bilan bahslashish mumkin. Balki, masalaga muqobil rakursdan yondashib ko\'rarmiz?'
+      },
+      'uz-cyrl': {
+        title: 'Виртуал маконда инсон омилини инобатга олиш',
+        description: 'Рақамли этикетнинг фундаментал тамойили: визуал анонимлик ҳолатида ҳам суҳбатдошнинг шахсини ва унинг ҳиссий ҳолатини ҳурмат қилиш. Реалликда айтилмайдиган сўзларни виртуал маконда ҳам қўлламаслик қатъий тавсия этилади.',
+        bad_example: 'Бу қандай мантиқсиз мақола ўзи? Муаллиф умуман саводсиз экан!',
+        good_example: 'Мақолада келтирилган айрим хулосалар билан баҳслашиш мумкин. Балки, масалага муқобил ракурсдан ёндашиб кўрармиз?'
+      },
+      'ru': {
+        title: 'Учет человеческого фактора в виртуальной среде',
+        description: 'Фундаментальный принцип цифрового этикета: уважение личности собеседника и его эмоционального состояния даже в условиях визуальной анонимности. Настоятельно рекомендуется воздерживаться от использования в виртуальной среде высказываний, неприемлемых в реальном общении.',
+        bad_example: 'Что за нелогичная статья? Автор абсолютно некомпетентен!',
+        good_example: 'Некоторые выводы, представленные в статье, представляются спорными. Возможно, стоит рассмотреть проблему с альтернативного ракурса?'
+      },
+      'en': {
+        title: 'Consideration of the Human Element in Virtual Environments',
+        description: 'The fundamental principle of digital etiquette: respecting the interlocutor\'s personality and emotional state, even under conditions of visual anonymity. It is strictly recommended to refrain from utilizing statements online that would be unacceptable in face-to-face communication.',
+        bad_example: 'What an illogical article! The author is completely incompetent!',
+        good_example: 'Certain conclusions presented in the article are debatable. Perhaps we could examine the issue from an alternative perspective?'
       }
     }
   }

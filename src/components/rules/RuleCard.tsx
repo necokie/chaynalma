@@ -61,20 +61,11 @@ export function RuleCard({ rule }: RuleCardProps) {
       <div className="p-6 md:p-10">
         
         {/* Top: Header & Text */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-8">
-          <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance tracking-tight text-foreground">{content.title}</h2>
-            <p className="text-muted-foreground text-[19px] leading-relaxed max-w-2xl font-medium">
-              {content.description}
-            </p>
-          </div>
-          <button 
-            onClick={handleShare}
-            className="p-3 mt-1 text-muted-foreground hover:text-primary bg-muted hover:bg-primary/10 rounded-full transition-colors flex-shrink-0"
-            title="Share Rule"
-          >
-            <Share2 className="w-5 h-5" />
-          </button>
+        <div className="flex flex-col mb-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance tracking-tight text-foreground">{content.title}</h2>
+          <p className="text-muted-foreground text-[18px] md:text-[19px] leading-relaxed max-w-3xl font-medium">
+            {content.description}
+          </p>
         </div>
 
         {/* Bottom: Chat Previews */}

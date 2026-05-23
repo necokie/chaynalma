@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="pb-24">
-      <main className="container mx-auto px-4 mt-8 md:mt-12 max-w-6xl">
+      <main className="container mx-auto px-4 lg:px-12 mt-8 md:mt-12 max-w-[1400px]">
         
         {/* Mobile Horizontal Navigation */}
         <div className="lg:hidden flex overflow-x-auto pb-4 mb-8 -mx-4 px-4 scrollbar-hide gap-2 sticky top-[80px] bg-background/95 backdrop-blur z-40 border-b border-border/50 py-2">
@@ -29,7 +29,7 @@ export default function Home() {
           })}
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-32">
           {/* Desktop Sidebar TOC */}
           <div className="hidden lg:block w-56 flex-shrink-0">
             <div className="sticky top-32">

@@ -3,34 +3,34 @@ import { Category } from '../types/rule';
 export const CATEGORIES: Category[] = [
   { 
     id: 'messaging', 
-    label: { 'en': 'Most Common Mistakes', 'ru': 'Самые частые ошибки', 'uz-latn': 'Eng ko\'p qilinadigan xatolar', 'uz-cyrl': 'Энг кўп қилинадиган хатолар' } 
+    label: { 'en': 'Primary Communication Errors', 'ru': 'Типичные ошибки коммуникации', 'uz-latn': 'Muloqotdagi tipik xatolar', 'uz-cyrl': 'Мулоқотдаги типик хатолар' } 
   },
   { 
     id: 'group', 
-    label: { 'en': 'Group Chat', 'ru': 'Групповые чаты', 'uz-latn': 'Guruh chatlari', 'uz-cyrl': 'Гуруҳ чатлари' } 
+    label: { 'en': 'Group Communication', 'ru': 'Правила групповых обсуждений', 'uz-latn': 'Guruhli muloqot me\'yorlari', 'uz-cyrl': 'Гуруҳли мулоқот меъёрлари' } 
   },
   { 
     id: 'calls', 
-    label: { 'en': 'Voice & Video Calls', 'ru': 'Звонки', 'uz-latn': 'Ovozli / Video', 'uz-cyrl': 'Овозли / Видео' } 
+    label: { 'en': 'Audiovisual Communication', 'ru': 'Аудиовизуальная коммуникация', 'uz-latn': 'Audiovizual muloqot odobi', 'uz-cyrl': 'Аудиовизуал мулоқот одоби' } 
   },
   { 
     id: 'universal', 
-    label: { 'en': 'Universal Golden Rules', 'ru': 'Универсальные правила', 'uz-latn': 'Oltin qoidalar', 'uz-cyrl': 'Олтин қоидалар' } 
+    label: { 'en': 'Fundamental Ethics', 'ru': 'Фундаментальная этика', 'uz-latn': 'Umumiy axloq tamoyillari', 'uz-cyrl': 'Умумий ахлоқ тамойиллари' } 
   },
   { 
     id: 'social', 
-    label: { 'en': 'Social Media', 'ru': 'Соцсети', 'uz-latn': 'Ijtimoiy tarmoqlar', 'uz-cyrl': 'Ижтимоий тармоқлар' } 
+    label: { 'en': 'Social Media Etiquette', 'ru': 'Этика в социальных сетях', 'uz-latn': 'Ijtimoiy tarmoq madaniyati', 'uz-cyrl': 'Ижтимоий тармоқ маданияти' } 
   },
   { 
     id: 'content', 
-    label: { 'en': 'Content Sharing', 'ru': 'Публикация контента', 'uz-latn': 'Kontent ulashish', 'uz-cyrl': 'Контент улашиш' } 
+    label: { 'en': 'Information Dissemination', 'ru': 'Нормы распространения информации', 'uz-latn': 'Ma\'lumot tarqatish qoidalari', 'uz-cyrl': 'Маълумот тарқатиш қоидалари' } 
   },
   { 
     id: 'comments', 
-    label: { 'en': 'Comments', 'ru': 'Комментарии', 'uz-latn': 'Izohlar', 'uz-cyrl': 'Изоҳлар' } 
+    label: { 'en': 'Commenting Guidelines', 'ru': 'Культура комментирования', 'uz-latn': 'Izoh qoldirish madaniyati', 'uz-cyrl': 'Изоҳ қолдириш маданияти' } 
   },
   { 
     id: 'privacy', 
-    label: { 'en': 'Privacy', 'ru': 'Приватность', 'uz-latn': 'Maxfiylik', 'uz-cyrl': 'Махфийлик' } 
+    label: { 'en': 'Privacy & Confidentiality', 'ru': 'Конфиденциальность', 'uz-latn': 'Maxfiylik va daxlsizlik', 'uz-cyrl': 'Махфийлик ва дахлсизлик' } 
   }
 ];
