@@ -3,34 +3,34 @@ import { Category } from '../types/rule';
 export const CATEGORIES: Category[] = [
   { 
     id: 'messaging', 
-    label: { 'en': 'Primary Communication Errors', 'ru': 'Типичные ошибки коммуникации', 'uz-latn': 'Muloqotdagi tipik xatolar', 'uz-cyrl': 'Мулоқотдаги типик хатолар' } 
+    label: { 'en': 'Direct Messaging', 'ru': 'Личные сообщения', 'uz-latn': 'Shaxsiy xabarlar', 'uz-cyrl': 'Шахсий хабарлар' } 
   },
   { 
     id: 'group', 
-    label: { 'en': 'Group Communication', 'ru': 'Правила групповых обсуждений', 'uz-latn': 'Guruhli muloqot me\'yorlari', 'uz-cyrl': 'Гуруҳли мулоқот меъёрлари' } 
+    label: { 'en': 'Group Chats', 'ru': 'Групповые чаты', 'uz-latn': 'Guruh chatlari', 'uz-cyrl': 'Гуруҳ чатлари' } 
   },
   { 
     id: 'calls', 
-    label: { 'en': 'Audiovisual Communication', 'ru': 'Аудиовизуальная коммуникация', 'uz-latn': 'Audiovizual muloqot odobi', 'uz-cyrl': 'Аудиовизуал мулоқот одоби' } 
+    label: { 'en': 'Voice & Video Calls', 'ru': 'Звонки и Видео', 'uz-latn': 'Ovozli va Video qo\'ng\'iroqlar', 'uz-cyrl': 'Овозли ва Видео қўнғироқлар' } 
   },
   { 
     id: 'universal', 
-    label: { 'en': 'Fundamental Ethics', 'ru': 'Фундаментальная этика', 'uz-latn': 'Umumiy axloq tamoyillari', 'uz-cyrl': 'Умумий ахлоқ тамойиллари' } 
+    label: { 'en': 'Golden Rules', 'ru': 'Золотые правила', 'uz-latn': 'Oltin qoidalar', 'uz-cyrl': 'Олтин қоидалар' } 
   },
   { 
     id: 'social', 
-    label: { 'en': 'Social Media Etiquette', 'ru': 'Этика в социальных сетях', 'uz-latn': 'Ijtimoiy tarmoq madaniyati', 'uz-cyrl': 'Ижтимоий тармоқ маданияти' } 
+    label: { 'en': 'Social Media', 'ru': 'Соцсети', 'uz-latn': 'Ijtimoiy tarmoqlar', 'uz-cyrl': 'Ижтимоий тармоқлар' } 
   },
   { 
     id: 'content', 
-    label: { 'en': 'Information Dissemination', 'ru': 'Нормы распространения информации', 'uz-latn': 'Ma\'lumot tarqatish qoidalari', 'uz-cyrl': 'Маълумот тарқатиш қоидалари' } 
+    label: { 'en': 'Sharing Content', 'ru': 'Обмен контентом', 'uz-latn': 'Ma\'lumot ulashish', 'uz-cyrl': 'Маълумот улашиш' } 
   },
   { 
     id: 'comments', 
-    label: { 'en': 'Commenting Guidelines', 'ru': 'Культура комментирования', 'uz-latn': 'Izoh qoldirish madaniyati', 'uz-cyrl': 'Изоҳ қолдириш маданияти' } 
+    label: { 'en': 'Comments', 'ru': 'Комментарии', 'uz-latn': 'Izohlar', 'uz-cyrl': 'Изоҳлар' } 
   },
   { 
     id: 'privacy', 
-    label: { 'en': 'Privacy & Confidentiality', 'ru': 'Конфиденциальность', 'uz-latn': 'Maxfiylik va daxlsizlik', 'uz-cyrl': 'Махфийлик ва дахлсизлик' } 
+    label: { 'en': 'Privacy & Boundaries', 'ru': 'Личные границы', 'uz-latn': 'Shaxsiy chegaralar', 'uz-cyrl': 'Шахсий чегаралар' } 
   }
 ];
