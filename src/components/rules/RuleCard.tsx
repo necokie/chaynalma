@@ -35,7 +35,13 @@ export function RuleCard({ rule }: RuleCardProps) {
           
           // Render bubbles
           return (
-            <div 
+          // Render bubbles
+          return (
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.2, delay: idx * 0.15 }}
               key={idx} 
               className={`max-w-[85%] rounded-[20px] px-4 py-2.5 text-[15px] leading-snug shadow-sm ${
                 isBad 
@@ -44,7 +50,7 @@ export function RuleCard({ rule }: RuleCardProps) {
               }`}
             >
               {msg.trim()}
-            </div>
+            </motion.div>
           );
         })}
       </div>
@@ -54,9 +60,11 @@ export function RuleCard({ rule }: RuleCardProps) {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      whileHover={{ y: -4 }}
       id={rule.slug}
-      className="bg-white rounded-[32px] border border-border/50 overflow-hidden shadow-glass transition-all duration-300 py-4"
+      className="bg-white rounded-[32px] border border-border/50 overflow-hidden shadow-glass hover:shadow-xl hover:border-border/80 transition-all duration-300 py-4"
     >
       <div className="p-6 md:p-10">
         
@@ -75,7 +83,7 @@ export function RuleCard({ rule }: RuleCardProps) {
           <div className="flex flex-col">
             <div className="flex items-center gap-2 text-danger font-bold text-lg px-1">
               <XCircle className="w-6 h-6" />
-              <span>{language === 'ru' ? 'Как не надо' : language === 'en' ? 'Don\'t do this' : 'Bunday qilmang'}</span>
+              <span>{language === 'ru' ? 'Как не надо' : language === 'en' ? 'Don\'t do this' : language === 'uz-cyrl' ? 'Бундай қилманг' : 'Bunday qilmang'}</span>
             </div>
             {renderChatBubbles(content.bad_example, true)}
           </div>
@@ -84,7 +92,7 @@ export function RuleCard({ rule }: RuleCardProps) {
           <div className="flex flex-col">
             <div className="flex items-center gap-2 text-success font-bold text-lg px-1">
               <CheckCircle2 className="w-6 h-6" />
-              <span>{language === 'ru' ? 'Как надо' : language === 'en' ? 'Instead, try this' : 'Shunday qiling'}</span>
+              <span>{language === 'ru' ? 'Как надо' : language === 'en' ? 'Instead, try this' : language === 'uz-cyrl' ? 'Шундай қилинг' : 'Shunday qiling'}</span>
             </div>
             {renderChatBubbles(content.good_example, false)}
           </div>

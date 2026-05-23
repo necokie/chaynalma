@@ -4,13 +4,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { rules } from '@/data/rules';
 import { CATEGORIES } from '@/data/categories';
 import { RuleCard } from '@/components/rules/RuleCard';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const { language } = useLanguage();
 
   return (
-    <div className="pb-24">
-      <main className="container mx-auto px-4 lg:px-8 mt-8 md:mt-12 max-w-[1500px]">
+    <div className="pb-24 relative">
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
+      <main className="container mx-auto px-4 lg:px-8 mt-8 md:mt-12 max-w-[1500px] relative z-10">
         
         {/* Mobile Horizontal Navigation */}
         <div className="lg:hidden flex overflow-x-auto pb-4 mb-8 -mx-4 px-4 scrollbar-hide gap-2 sticky top-[80px] bg-background/95 backdrop-blur z-40 border-b border-border/50 py-2">
@@ -62,9 +64,14 @@ export default function Home() {
               
               return (
                 <section key={category.id} id={category.id} className="scroll-mt-32">
-                  <h2 className="text-2xl md:text-3xl font-extrabold mb-8 pb-4 border-b border-border text-foreground tracking-tight">
+                  <motion.h2 
+                    initial={{ opacity: 0, x: -15 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="text-[13px] md:text-[14px] font-bold uppercase tracking-widest text-muted-foreground/80 mb-6 pb-2 border-b border-border/50"
+                  >
                     {category.label[language]}
-                  </h2>
+                  </motion.h2>
                   <div className="space-y-12">
                     {categoryRules.map(rule => (
                       <RuleCard key={rule.slug} rule={rule} />
