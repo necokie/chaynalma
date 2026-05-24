@@ -10,8 +10,29 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Chaynalma.uz - Etiquette for messengers",
-  description: "Modern communication etiquette for Telegram, Instagram, and WhatsApp.",
+  title: "Chaynalma.uz - Raqamli muloqot va etiket qoidalari",
+  description: "Telegram, Instagram va WhatsApp uchun zamonaviy raqamli muloqot qoidalari. Samarali, tushunarli va vaqtni tejovchi yozishmalar.",
+  keywords: ["etiket", "telegram", "muloqot", "chaynalma", "raqamli odob", "nohello", "uzbekistan"],
+  authors: [{ name: "necokie", url: "https://necokie.com" }],
+  openGraph: {
+    title: "Chaynalma.uz - Raqamli muloqot qoidalari",
+    description: "Telegram, Instagram va WhatsApp uchun zamonaviy raqamli muloqot qoidalari.",
+    url: "https://chaynalma.uz",
+    siteName: "Chaynalma",
+    locale: "uz_UZ",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function RootLayout({
