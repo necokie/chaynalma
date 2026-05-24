@@ -1,19 +1,27 @@
 export type Language = 'uz-latn' | 'uz-cyrl' | 'ru' | 'en';
 
-export interface RuleTranslation {
-  title: string;
-  description: string;
+export interface SubRule {
+  sub_title: string;
+  reason: string;
   bad_example: string;
   good_example: string;
 }
 
-export interface Rule {
-  slug: string;
-  categoryId: string;
-  translations: Record<Language, RuleTranslation>;
+export interface SubRuleTranslation {
+  sub_title: string;
+  reason: string;
+  bad_example: string;
+  good_example: string;
 }
 
-export interface Category {
+export interface ChapterTranslation {
+  category: string;
+  title: string;
+  description: string;
+  rules: SubRuleTranslation[];
+}
+
+export interface Chapter {
   id: string;
-  label: Record<Language, string>;
+  translations: Record<Language, ChapterTranslation>;
 }

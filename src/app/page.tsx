@@ -1,80 +1,91 @@
 "use client";
 
 import { useLanguage } from '@/contexts/LanguageContext';
-import { rules } from '@/data/rules';
-import { CATEGORIES } from '@/data/categories';
-import { RuleCard } from '@/components/rules/RuleCard';
+import { chapters } from '@/data/rules';
+import { SubRuleCard } from '@/components/rules/RuleCard';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   const { language } = useLanguage();
 
+  const tocLabel = language === 'ru' ? 'Разделы' : language === 'en' ? 'Sections' : language === 'uz-cyrl' ? 'Бўлимлар' : 'Bo\'limlar';
+
   return (
-    <div className="pb-24 relative">
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
-      <main className="container mx-auto px-4 lg:px-8 mt-8 md:mt-12 max-w-[1500px] relative z-10">
-        
-        {/* Mobile Horizontal Navigation */}
-        <div className="lg:hidden flex overflow-x-auto pb-4 mb-8 -mx-4 px-4 scrollbar-hide gap-2 sticky top-[80px] bg-background/95 backdrop-blur z-40 border-b border-border/50 py-2">
-          {CATEGORIES.map(category => {
-            const hasRules = rules.some(r => r.categoryId === category.id);
-            if (!hasRules) return null;
+    <div className="pb-32">
+      <main className="container mx-auto px-4 lg:px-6 mt-6 md:mt-10 max-w-[1400px]">
+
+        {/* Mobile horizontal nav */}
+        <div className="lg:hidden flex overflow-x-auto pb-3 mb-6 -mx-4 px-4 scrollbar-hide gap-2 sticky top-[52px] bg-background/95 backdrop-blur z-40 border-b border-border/40 py-2">
+          {chapters.map(chapter => {
+            const t = chapter.translations[language];
             return (
-              <a 
-                key={category.id} 
-                href={`#${category.id}`} 
-                className="whitespace-nowrap px-4 py-2 bg-muted/50 text-[13px] font-semibold rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors border border-border/50"
+              <a
+                key={chapter.id}
+                href={`#${chapter.id}`}
+                className="whitespace-nowrap px-3.5 py-1.5 bg-muted/40 text-[12px] font-semibold rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors border border-border/40"
               >
-                {category.label[language]}
+                {t.category}
               </a>
             );
           })}
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-40">
-          {/* Desktop Sidebar TOC */}
-          <div className="hidden lg:block w-48 flex-shrink-0">
-            <div className="sticky top-32">
-              <h3 className="font-bold text-[10px] uppercase tracking-widest text-muted-foreground/60 mb-4 px-3">
-                {language === 'ru' ? 'Оглавление' : language === 'en' ? 'Table of Contents' : 'Mundarija'}
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24">
+          {/* Sidebar TOC */}
+          <aside className="hidden lg:block w-44 flex-shrink-0">
+            <div className="sticky top-20">
+              <h3 className="font-bold text-[9px] uppercase tracking-[0.2em] text-muted-foreground/50 mb-3 pl-3">
+                {tocLabel}
               </h3>
-              <nav className="flex flex-col space-y-0.5 border-l border-border pl-4">
-                {CATEGORIES.map(category => {
-                  const hasRules = rules.some(r => r.categoryId === category.id);
-                  if (!hasRules) return null;
+              <nav className="flex flex-col border-l border-border/60 pl-3">
+                {chapters.map(chapter => {
+                  const t = chapter.translations[language];
                   return (
-                    <a 
-                      key={category.id} 
-                      href={`#${category.id}`} 
-                      className="block px-3 py-1.5 text-[12.5px] font-medium text-muted-foreground hover:text-foreground transition-colors -ml-[17px] border-l border-transparent hover:border-foreground"
+                    <a
+                      key={chapter.id}
+                      href={`#${chapter.id}`}
+                      className="block px-2 py-1.5 text-[11.5px] font-medium text-muted-foreground hover:text-foreground transition-colors -ml-px border-l border-transparent hover:border-foreground"
                     >
-                      {category.label[language]}
+                      {t.category}
                     </a>
                   );
                 })}
               </nav>
             </div>
-          </div>
+          </aside>
 
-          {/* Main Content Areas */}
-          <div className="flex-1 space-y-24 max-w-3xl">
-            {CATEGORIES.map(category => {
-              const categoryRules = rules.filter(r => r.categoryId === category.id);
-              if (categoryRules.length === 0) return null;
-              
+          {/* Main content */}
+          <div className="flex-1 max-w-3xl">
+            {chapters.map((chapter, chapterIdx) => {
+              const t = chapter.translations[language];
               return (
-                <section key={category.id} id={category.id} className="scroll-mt-32">
-                  <motion.h2 
-                    initial={{ opacity: 0, x: -15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    className="text-[13px] md:text-[14px] font-bold uppercase tracking-widest text-muted-foreground/80 mb-6 pb-2 border-b border-border/50"
+                <section
+                  key={chapter.id}
+                  id={chapter.id}
+                  className={`scroll-mt-24 ${chapterIdx > 0 ? 'mt-20 pt-20 border-t border-border/40' : ''}`}
+                >
+                  {/* Chapter header */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    className="mb-10"
                   >
-                    {category.label[language]}
-                  </motion.h2>
-                  <div className="space-y-12">
-                    {categoryRules.map(rule => (
-                      <RuleCard key={rule.slug} rule={rule} />
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/60 mb-2 block">
+                      {t.category}
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-foreground tracking-tight mb-3 text-balance">
+                      {t.title}
+                    </h2>
+                    <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-xl">
+                      {t.description}
+                    </p>
+                  </motion.div>
+
+                  {/* Sub-rules */}
+                  <div className="space-y-10">
+                    {t.rules.map((rule, ruleIdx) => (
+                      <SubRuleCard key={ruleIdx} rule={rule} index={ruleIdx} />
                     ))}
                   </div>
                 </section>

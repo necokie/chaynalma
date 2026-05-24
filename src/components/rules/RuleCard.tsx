@@ -2,52 +2,52 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Rule } from '@/types/rule';
-import { CheckCircle2, XCircle, Share2 } from 'lucide-react';
+import { SubRuleTranslation } from '@/types/rule';
+import { CheckCircle2, XCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-interface RuleCardProps {
-  rule: Rule;
+interface SubRuleCardProps {
+  rule: SubRuleTranslation;
+  index: number;
 }
 
-export function RuleCard({ rule }: RuleCardProps) {
+export function SubRuleCard({ rule, index }: SubRuleCardProps) {
   const { language } = useLanguage();
-  const content = rule.translations[language];
 
-  const handleShare = () => {
-    const url = `${window.location.origin}#${rule.slug}`;
-    navigator.clipboard.writeText(url);
-  };
+  const badLabel = language === 'ru' ? 'Неверно' : language === 'en' ? 'Incorrect' : language === 'uz-cyrl' ? 'Нотўғри' : 'Noto\'g\'ri';
+  const goodLabel = language === 'ru' ? 'Верно' : language === 'en' ? 'Correct' : language === 'uz-cyrl' ? 'Тўғри' : 'To\'g\'ri';
 
-  const renderChatBubbles = (text: string, isBad: boolean) => {
-    const messages = text.split('\n');
+  const renderMessages = (text: string, isBad: boolean) => {
+    const lines = text.split('\n');
     return (
-      <div className="flex flex-col gap-2 p-5 bg-muted/20 rounded-2xl border border-muted mt-4">
-        {messages.map((msg, idx) => {
-          // System timestamps
-          if (msg.trim().startsWith('[')) {
+      <div className="flex flex-col gap-1.5 p-4 bg-muted/30 rounded-xl border border-border/40 mt-3">
+        {lines.map((line, idx) => {
+          const trimmed = line.trim();
+          if (!trimmed) return null;
+
+          // Parenthetical annotations / timestamps
+          if (trimmed.startsWith('(') || trimmed.startsWith('Yoki:') || trimmed.startsWith('Или:') || trimmed.startsWith('Or:') || trimmed.startsWith('Ёки:')) {
             return (
-              <div key={idx} className="text-center text-[11px] text-muted-foreground/70 my-3 font-medium tracking-wider uppercase">
-                {msg.replace(/[\[\]]/g, '').trim()}
+              <div key={idx} className="text-center text-[11px] text-muted-foreground/70 my-1.5 font-medium italic">
+                {trimmed}
               </div>
             );
           }
-          
-          // Render bubbles
+
           return (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+            <motion.div
+              initial={{ opacity: 0, x: isBad ? -8 : 8 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.2, delay: idx * 0.15 }}
-              key={idx} 
-              className={`max-w-[85%] rounded-[20px] px-4 py-2.5 text-[15px] leading-snug shadow-sm ${
-                isBad 
-                  ? 'bg-muted/60 text-foreground rounded-tl-sm self-start border border-muted' 
-                  : 'bg-primary text-white rounded-br-sm self-end'
+              transition={{ duration: 0.2, delay: idx * 0.08 }}
+              key={idx}
+              className={`max-w-[90%] rounded-2xl px-3.5 py-2 text-[14px] leading-relaxed ${
+                isBad
+                  ? 'bg-white text-foreground rounded-tl-sm self-start border border-border/60'
+                  : 'bg-foreground text-background rounded-br-sm self-end'
               }`}
             >
-              {msg.trim()}
+              {trimmed}
             </motion.div>
           );
         })}
@@ -56,47 +56,42 @@ export function RuleCard({ rule }: RuleCardProps) {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
+    <motion.article
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      whileHover={{ y: -4 }}
-      id={rule.slug}
-      className="bg-white rounded-[32px] border border-border/50 overflow-hidden shadow-glass hover:shadow-xl hover:border-border/80 transition-all duration-300 py-4"
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.35, delay: index * 0.05 }}
+      className="group"
     >
-      <div className="p-6 md:p-10">
+      <div className="border-l-2 border-border/50 group-hover:border-foreground/30 transition-colors pl-5 md:pl-7 py-1">
+        {/* Sub-rule title */}
+        <h3 className="text-xl md:text-2xl font-bold text-foreground tracking-tight mb-3 text-balance">
+          {rule.sub_title}
+        </h3>
         
-        {/* Top: Header & Text */}
-        <div className="flex flex-col mb-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-balance tracking-tight text-foreground">{content.title}</h2>
-          <p className="text-muted-foreground text-[18px] md:text-[19px] leading-relaxed max-w-3xl font-medium">
-            {content.description}
-          </p>
-        </div>
+        {/* Reason */}
+        <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-2xl mb-6">
+          {rule.reason}
+        </p>
 
-        {/* Bottom: Chat Previews */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-10">
-          
-          {/* Bad Example */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 text-danger font-bold text-lg px-1">
-              <XCircle className="w-6 h-6" />
-              <span>{language === 'ru' ? 'Как не надо' : language === 'en' ? 'Don\'t do this' : language === 'uz-cyrl' ? 'Бундай қилманг' : 'Bunday qilmang'}</span>
+        {/* Examples */}
+        <div className="grid md:grid-cols-2 gap-5">
+          <div>
+            <div className="flex items-center gap-1.5 text-danger font-semibold text-[13px] uppercase tracking-wider mb-0.5">
+              <XCircle className="w-4 h-4" />
+              <span>{badLabel}</span>
             </div>
-            {renderChatBubbles(content.bad_example, true)}
+            {renderMessages(rule.bad_example, true)}
           </div>
-
-          {/* Good Example */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 text-success font-bold text-lg px-1">
-              <CheckCircle2 className="w-6 h-6" />
-              <span>{language === 'ru' ? 'Как надо' : language === 'en' ? 'Instead, try this' : language === 'uz-cyrl' ? 'Шундай қилинг' : 'Shunday qiling'}</span>
+          <div>
+            <div className="flex items-center gap-1.5 text-success font-semibold text-[13px] uppercase tracking-wider mb-0.5">
+              <CheckCircle2 className="w-4 h-4" />
+              <span>{goodLabel}</span>
             </div>
-            {renderChatBubbles(content.good_example, false)}
+            {renderMessages(rule.good_example, false)}
           </div>
-
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
